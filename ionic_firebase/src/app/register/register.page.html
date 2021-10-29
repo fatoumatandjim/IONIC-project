@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titre">Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <img src="assets/image/profile.jpg" alt=""><br> <br>
+  <div *ngIf="!inscrit">
+    <form #donnee="ngForm" (ngSubmit)="soumettre(donnee)">
+
+      <ion-label class="label1">Entrez votre nom </ion-label>
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" name="nom" ngModel> </ion-input>
+    </ion-item><br> <br>
+    <ion-label class="label1">Entrez votre prenom </ion-label>
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" name="prenom" ngModel> </ion-input>
+    </ion-item><br> <br>
+      <ion-label class="label1">Entrez votre login </ion-label>
+    <ion-item>
+      <ion-icon name="mail-outline"></ion-icon>
+
+      <ion-input type="email" name="login" ngModel> </ion-input>
+    </ion-item><br> <br>
+       <ion-label color="purple" class="label2">Entrez votre password </ion-label>
+      <ion-item>
+        <ion-icon name="eye-outline"></ion-icon>
+        <ion-input type="password" name="password" ngModel></ion-input>
+      </ion-item> <br> <br>
+        <ion-button type="submit" class="ins"color="succes">S'inscrire</ion-button>
+
+  </form>
+</div>
+  <div inscrit>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,31 @@
+
+<ion-content id="bg">
+  <div class="n">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="titre">ZAHARA'APP</ion-title>
+    </ion-toolbar>
+  </ion-header> <br> <br>
+  <img src="assets/image/profile.jpg" alt=""><br> <br>
+  <div *ngIf="!connected" class="b">
+
+      <ion-label class="label1">Entrez votre login </ion-label>
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="user.email" class="input1"></ion-input>
+    </ion-item><br> <br>
+       <ion-label color="purple" class="label2">Entrez votre password </ion-label>
+      <ion-item>
+        <ion-input type="password"  [(ngModel)]="user.password"></ion-input>
+      </ion-item> <br> <br>
+        <ion-button (click)="password()">mot de passe oublié</ion-button><br> <br> <br>
+      <ion-button type="submit" class="conn" (click)="login()"fill="outline">connexion</ion-button> <br> <br>
+
+      <ion-button (click)="signUp()" class="ins">inscription</ion-button></div>
+      <div *ngIf="connected">
+        <h1>vous etes connecter</h1>
+
+    </div>
+
+  </div>
+
+</ion-content>

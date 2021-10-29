@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title >
+      utilisateurs
+    </ion-title>
+    <p>bienvenue {{ nom }}</p>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> <br> <br>
+  <ion-list *ngFor="let m of liste">
+
+    <ion-item>
+      <ion-icon slot="start"name="person-outline"></ion-icon>
+      <ion-label>{{m['prenom']}} {{m['nom']}}</ion-label>
+</ion-item>
+
+  </ion-list>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+
+
+      <ion-tab-button tab="speakers" (click)="profil()">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>profile</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="speakers" (click)="recherche()">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-label>recherche</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="speakers" (click)="deconnexion()">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>deconnexion</ion-label>
+      </ion-tab-button>
+
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
